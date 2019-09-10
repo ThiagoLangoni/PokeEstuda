@@ -35,9 +35,9 @@ class FormPokemonActivity : AppCompatActivity() {
 
     private fun setValues() {
         pokemon = intent.getParcelableExtra<Pokemon>("POKEMON")
-        tvPokemonNameForm.text = pokemon.name
+        tvPokemonNameForm.text = pokemon.nome
 
-        picasso.load("https://pokedexdx.herokuapp.com${pokemon.imageURL}").into(ivPokemonForm)
+        picasso.load("https://pokedexdx.herokuapp.com${pokemon.urlImagem}").into(ivPokemonForm)
         sbAttack.progress = pokemon.attack
         sbDefense.progress = pokemon.defense
         sbPS.progress = pokemon.ps
